@@ -13,9 +13,11 @@ UserController.create = function(req, res) {
   bcrypt.hash(req.body.password, 10, function(err, hash) {
     req.body.password = hash;
 
+    console.log(req.body);
+
     User.create(req.body)
       .then(result => {
-        res.status(200).json({ Message: "Usuario Incluido com sucesso" });
+        res.status(200).json({ Message: "Create user success" });
       })
       .catch(error => {
         res.status(412).json({ Message: error.Message });
