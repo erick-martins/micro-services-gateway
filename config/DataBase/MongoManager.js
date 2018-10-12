@@ -5,6 +5,6 @@ mongoose.Promise = require("bluebird");
 
 module.exports = app => {
   mongoose.connect(config.database).then(() => {
-    console.log("Mongo connectado");
+    console.log("Mongo connectado!");
   });
 };
