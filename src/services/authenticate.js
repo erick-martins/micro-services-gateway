@@ -1,4 +1,4 @@
-import User from "../models/UserSchema";
+import { User } from "../schemas/user";
 import jwt from "jsonwebtoken";
 import config from "../../config/config";
 import bcrypt from "bcrypt";

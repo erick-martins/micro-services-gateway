@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import config from "../config";
+import config from "../../config/config";
 
 module.exports = app => {
   app.use("/api", (req, res, next) => {
