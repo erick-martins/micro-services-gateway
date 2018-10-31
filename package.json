@@ -16,6 +16,7 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
+    "error-factory": "^0.1.6",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.3"

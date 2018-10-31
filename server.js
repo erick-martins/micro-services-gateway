@@ -5,7 +5,6 @@ const app = express();
 
 consign()
   .then("config")
-  .then("src/middlewares/authenticate.js")
-  .then("src/usercases")
-  .then("src/services")
+  .then("src/use-cases")
+  .then("src/router.js")
   .into(app);

@@ -1,5 +1,7 @@
-import bodyParser from "body-parser";
-import morgan from "morgan";
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
+
+global.Promise = require("bluebird");
 
 module.exports = app => {
   app.use(morgan("dev"));
