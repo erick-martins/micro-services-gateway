@@ -1,5 +1,6 @@
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const router = require("../src/router");
 
 global.Promise = require("bluebird");
 
@@ -16,4 +17,5 @@ module.exports = app => {
     );
     next();
   });
+  app.use(router);
 };

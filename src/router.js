@@ -1,7 +1,7 @@
 const createUser = require("../src/use-cases/user");
+const { Router } = require("express");
 
-module.exports = app => {
-  app.post("/user", (req, res) => {
-    createUser(req, res);
-  });
-};
+const router = Router();
+router.post("/user", createUser);
+
+module.exports = router;

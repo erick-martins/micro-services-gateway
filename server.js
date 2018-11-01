@@ -1,10 +1,3 @@
-import express from "express";
-import consign from "consign";
+const Init = require("./config/boot");
 
-const app = express();
-
-consign()
-  .then("config")
-  .then("src/use-cases")
-  .then("src/router.js")
-  .into(app);
+Init();
