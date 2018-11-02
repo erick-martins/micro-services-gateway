@@ -1,11 +1,9 @@
-const User = require("../../schemas/user");
+const User = require("../../../schemas");
 // const bcrypt = require("bcrypt");
 const EventEmitter = require("events");
 
 const factory = require("error-factory");
 
-const ErrorNotFound = factory("ErrorNotFound");
-const BodyNotValid = factory("BodyNotValid");
 const ValidationError = factory("ValidationError");
 
 module.exports = ({ password, username }) => {

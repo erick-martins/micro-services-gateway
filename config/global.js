@@ -1,6 +1,6 @@
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const router = require("../src/router");
+const router = require("../src/cases/user-container/router");
 
 global.Promise = require("bluebird");
 
