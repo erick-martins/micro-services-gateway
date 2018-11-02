@@ -1,10 +1,14 @@
 const User = require("../../../schemas");
-// const bcrypt = require("bcrypt");
 const EventEmitter = require("events");
 
 const factory = require("error-factory");
 
-const ValidationError = factory("ValidationError");
+const ValidationError = factory("ValidationError", {
+  Event: "create-user.ValidationError",
+  message: factory.ErrorProperty({
+    writable: false
+  })
+});
 
 module.exports = ({ password, username }) => {
   const mediator = new EventEmitter();
@@ -12,7 +16,8 @@ module.exports = ({ password, username }) => {
   const check = value =>
     value ? Promise.resolve(value) : Promise.reject(ValidationError());
 
-  const emitValidationError = err => mediator.emit("ValidationError", err);
+  const emitValidationError = err =>
+    mediator.emit("create-user.ValidationError", err);
 
   check(username)
     .then(() => check(password))
