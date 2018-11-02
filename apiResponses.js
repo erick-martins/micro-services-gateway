@@ -1,15 +1,13 @@
-const CACHE_DURATION_IN_SECS = 300;
-
 const ok = res => result => {
   res.status(200).json(result);
 };
 
-const notFound = res => _ => {
-  res.status(404).end();
+const notFound = res => err => {
+  res.status(404).json(err);
 };
 
-const badRequest = res => _ => {
-  res.status(400).end();
+const badRequest = res => err => {
+  res.status(400).json(err);
 };
 
 module.exports = { ok, notFound, badRequest };
