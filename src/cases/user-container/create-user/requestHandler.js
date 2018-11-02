@@ -6,7 +6,7 @@ module.exports = createUser => (req, res) => {
   const responseNotFound = apiResponses.notFound(res);
 
   createUser(req.body)
-    .on("CreateUser.Success", responseOk)
-    .on("ValidationError", responseBadRequest)
-    .on("CreateUser.responseNotFound", responseNotFound);
+    .on("create-user.Success", responseOk)
+    .on("create-user.ValidationError", responseBadRequest)
+    .on("create-user.responseNotFound", responseNotFound);
 };
