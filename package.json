@@ -1,5 +1,5 @@
 {
-  "name": "generic-api",
+  "name": "narglar-api",
   "version": "1.1.0",
   "description": "Api em node js, usando padrão de emissão de eventos",
   "main": "server.js",
