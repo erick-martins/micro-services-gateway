@@ -4,7 +4,7 @@ const { Router } = require("express");
 const router = Router();
 
 router.get("/teste", function(req, res) {
-  res.json({ message: "api funcionando" });
+  res.json({ message: "api funcionando muito bem" });
 });
 
 module.exports = router;
