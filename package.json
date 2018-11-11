@@ -4,7 +4,7 @@
   "description": "Api em node js, usando padrão de emissão de eventos",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "thiago josé de almeida simão",

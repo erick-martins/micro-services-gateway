@@ -3,6 +3,8 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.post("/user", createUser);
+router.get("/teste", function(req, res) {
+  res.json({ message: "api funcionando" });
+});
 
 module.exports = router;
