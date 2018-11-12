@@ -3,7 +3,7 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.post("/teste", (req, res) => {
+router.get("/teste", (req, res) => {
   res.json({ message: "esta funcionando a api" });
 });
 
