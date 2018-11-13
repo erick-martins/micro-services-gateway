@@ -3,8 +3,12 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.get("/teste", (req, res) => {
+router.get("/public", (req, res) => {
   res.json({ message: "esta funcionando a api" });
+});
+
+router.get("/api/private", (req, res) => {
+  res.json({ message: "Esta authenticado" });
 });
 
 module.exports = router;

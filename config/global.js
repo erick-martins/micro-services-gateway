@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const router = require("../src/cases/user-container/router");
+const authenticatedRoute = require("../src/midlewares/auth");
 
 global.Promise = require("bluebird");
 
@@ -17,5 +18,6 @@ module.exports = app => {
     );
     next();
   });
+  app.use("/api", authenticatedRoute);
   app.use(router);
 };
