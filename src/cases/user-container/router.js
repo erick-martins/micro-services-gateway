@@ -1,14 +1,20 @@
 const createUser = require("./create-user");
-const { Router } = require("express");
+const {
+  Router
+} = require("express");
 
 const router = Router();
 
 router.get("/public", (req, res) => {
-  res.json({ message: "esta funcionando a api pra caralho!" });
+  res.json({
+    message: "está funcionando a api pra caralho! ENV = " + process.env.NODE_ENV
+  });
 });
 
 router.get("/api/private", (req, res) => {
-  res.json({ message: "Esta authenticado" });
+  res.json({
+    message: "Esta authenticado"
+  });
 });
 
 module.exports = router;
