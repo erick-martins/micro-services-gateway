@@ -7,7 +7,7 @@ const router = Router();
 
 router.get("/public", (req, res) => {
   res.json({
-    message: "está funcionando a api pra caralho! ENV = " + process.env.NODE_ENV
+    message: "está funcionando a api pra caralho!\n ENV = " + process.env.NODE_ENV
   });
 });
 
