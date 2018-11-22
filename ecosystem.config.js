@@ -1,9 +1,15 @@
-const SUFFIX = process.argv.indexOf('--env') === -1 ? '' :
-    '-' + process.argv[process.argv.indexOf('--env') + 1]
+const env = process.argv.indexOf('--env') === -1 ? 'development' :
+    process.argv[process.argv.indexOf('--env') + 1]
+
+const domains = {
+    development: "hml-api.oraculosnovaera.com.br",
+    production: "api.oraculosnovaera.com.br",
+}
+
 
 module.exports = {
     apps: [{
-        name: 'Oracle API ' + SUFFIX,
+        name: domains[env],
         script: 'server.js',
         env: {
             NODE_ENV: 'development',
