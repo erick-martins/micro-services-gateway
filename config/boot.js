@@ -1,5 +1,4 @@
 const config = require("./config");
-const mongoManager = require("./dataBase/mongoManager");
 const globalConfiguration = require("./global");
 const express = require("express");
 const app = express();
